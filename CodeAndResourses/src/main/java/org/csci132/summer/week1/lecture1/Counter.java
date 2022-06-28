@@ -7,7 +7,7 @@ package org.csci132.summer.week1.lecture1;
 public class Counter {
 
     private int count;
-    private int p1 = 10, p2 = 20;
+
 
     public Counter() {
     }
