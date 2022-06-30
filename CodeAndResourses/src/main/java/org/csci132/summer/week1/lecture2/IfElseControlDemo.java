@@ -1,5 +1,7 @@
 package org.csci132.summer.week1.lecture2;
 
+import java.util.Random;
+
 /**
  * @author : Adiesha
  * @created : 6/29/2022, Wednesday
