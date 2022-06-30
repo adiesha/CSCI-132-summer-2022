@@ -1,0 +1,46 @@
+commands
+Hello World ->
+compile
+javac -d . HelloWorld.java
+java csci1.HelloWorld
+
+StringRotate
+compile-> 
+Need an external library it's in the lib folder.
+When compiling we need to let comiler know where the external lib is, in this case,
+lib/commons-lang3-3.12.0.jar
+download https://search.maven.org/artifact/org.apache.commons/commons-lang3/3.11/jar
+
+
+javac -d . -cp lib\commons-lang3-3.12.0.jar;. StringRotate.java
+java -cp lib\commons-lang3-3.12.0.jar;. csci1.Rotate.StringRotate
+
+
+jar cfv HelloWorld.jar -C classes .
+jar cfv HelloWorld2.jar -C . .
+java -cp HelloWorld.jar;lib\commons-lang3-3.12.0.jar csci1.Rotate.StringRotate
+
+
+Maven configuration changes 
+<dependency>
+    <groupId>org.apache.commons</groupId>
+    <artifactId>commons-lang3</artifactId>
+    <version>3.11</version>
+</dependency>
+
+<plugin>
+    <artifactId>maven-jar-plugin</artifactId>
+    <version>3.0.2</version>
+    <configuration>
+    <archive>
+        <manifest>
+        <addClasspath>true</addClasspath>
+        <mainClass>org.csci132.summer.week1.lecture3.Hello</mainClass>
+        </manifest>
+    </archive>
+    <finalName>codebasejar.jar</finalName>
+    </configuration>
+</plugin>
+This will also add a manifest file as well, which includes the class with the main method
+Therefore you can run 
+java -jar jarfile.jar
