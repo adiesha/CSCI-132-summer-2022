@@ -1,0 +1,7 @@
+Write a short Java program that takes all the lines input to standard input and writes them to standard output in reverse order. That is, each line is output in the correct order, but the ordering of the lines is reversed.
+
+
+Write a Java program that can simulate a simple calculator, using the Java console as the exclusive input and output device. That is, each input to the calculator, be it a number, like 12.34 or 1034, or an operator, like + or =, can be done on a separate line. After each such input, you should output to the Java console what would be displayed on your calculator.
+
+
+You are given a file with 100 lines. Read the file and print each line in upper case. Find the number of words in the file and print that value. Your file name should be given as a parameter to your java application. Use String[] args in main method to read the arguements. You can put the file inside the project folder. 
