@@ -51,6 +51,15 @@
         <plugin>
           <artifactId>maven-jar-plugin</artifactId>
           <version>3.0.2</version>
+          <configuration>
+            <archive>
+              <manifest>
+                <addClasspath>true</addClasspath>
+                <mainClass>org.csci132.summer.week1.lecture3.Hello</mainClass>
+              </manifest>
+            </archive>
+            <finalName>codebasejar.jar</finalName>
+          </configuration>
         </plugin>
         <plugin>
           <artifactId>maven-install-plugin</artifactId>
