@@ -19,7 +19,7 @@ public class BreakAndContinueDemo {
         System.out.println("_______________________");
         int k = 0;
         while (k < 10) {
-            if (k == 5) {
+            if (k % 2 == 0) {
                 k++;
                 continue;
             }
