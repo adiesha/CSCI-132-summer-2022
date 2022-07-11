@@ -1,5 +1,10 @@
 package org.csci132.summer.week3.lecture1;
 
+import org.apache.commons.lang3.RandomStringUtils;
+
+import java.util.Arrays;
+import java.util.Random;
+
 /**
  * Class for storing high scores in an array in nondecreasing order.
  */
@@ -46,5 +51,25 @@ public class Scoreboard {
         board[numEntries - 1] = null; // null out the old last score
         numEntries--;
         return temp; // return the removed object
+    }
+
+    @Override
+    public String toString() {
+        return "Scoreboard{" + '\n' +
+                "numEntries=" + numEntries +
+                "," + '\n' + " board=" + Arrays.toString(board) +
+                '\n' + '}';
+    }
+
+    public static void main(String[] args) {
+
+        Scoreboard scoreboard = new Scoreboard(10);
+        Random random = new Random();
+        for (int i = 0; i < 8; i++) {
+            GameEntry entry = new GameEntry(RandomStringUtils.randomAlphanumeric(17).toUpperCase(), random.nextInt(100));
+            scoreboard.add(entry);
+        }
+
+        System.out.println(scoreboard);
     }
 }
