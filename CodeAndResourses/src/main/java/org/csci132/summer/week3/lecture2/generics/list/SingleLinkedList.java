@@ -73,4 +73,15 @@ public class SingleLinkedList<T> implements LinkedListInterface<T> {
         }
         return answer;
     }
+
+    public String toString() {
+        StringBuilder stringBuilder = new StringBuilder("Singular LinkedList: ->\n");
+        Node<T> temp = this.head;
+        while (temp != null) {
+            stringBuilder.append(temp.getElement().toString());
+            stringBuilder.append("\n");
+            temp = temp.getNext();
+        }
+        return stringBuilder.toString();
+    }
 }
