@@ -14,5 +14,9 @@ public class LinkedListDemo {
         listInterface.addLast(20);
 
         System.out.println(listInterface);
+
+        listInterface.removeFirst();
+        listInterface.removeFirst();
+        System.out.println(listInterface);
     }
 }
