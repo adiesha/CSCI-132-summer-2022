@@ -28,7 +28,7 @@ public class DoublyLinkedListTest {
         Assert.assertFalse(doublyLinkedList.exists(14));
         doublyLinkedList.addFirst(12);
         Assert.assertTrue(doublyLinkedList.exists(12));
-        Assert.assertTrue(doublyLinkedList.exists(15));
+        Assert.assertFalse(doublyLinkedList.exists(15));
         doublyLinkedList.addFirst(9192);
         doublyLinkedList.addFirst(256);
         doublyLinkedList.addFirst(132);
