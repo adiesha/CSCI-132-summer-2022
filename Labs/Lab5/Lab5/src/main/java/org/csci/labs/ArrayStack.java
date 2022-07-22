@@ -2,7 +2,7 @@ package org.csci.labs;
 
 public class ArrayStack<E> implements Stack<E> {
     public static final int CAPACITY = 1000; // default array capacity
-    private final E[] data; // generic array used for storage
+    private E[] data; // generic array used for storage
     private int t = -1; // index of the top element in stack
 
     public ArrayStack() {
@@ -38,6 +38,10 @@ public class ArrayStack<E> implements Stack<E> {
     private void resize(int size) {
         // create a new array of |size| and copy the value from the old array
         // update the arary reference to the new array
+    }
+
+    public int getInternalArraySize() {
+        return this.data.length;
     }
 
     public E pop() {
