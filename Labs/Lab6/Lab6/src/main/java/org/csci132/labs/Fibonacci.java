@@ -11,7 +11,13 @@ public class Fibonacci {
         // You have to implement this using recursion
         // Fib - 0, 1, 1, 2, 3, 5, 8, 13, 21 ....
         // Fib_{i} = Fib_{i-1} + Fib_{i-2}
-        return 0;
+        if (n < 1) {
+            throw new IllegalStateException("Not defined for n < 1");
+        } else if (n < 3) {
+            return n - 1;
+        } else {
+            return fibonacci(n - 1) + fibonacci(n - 2);
+        }
     }
 
 

@@ -1,6 +1,7 @@
 package org.csci132.labs;
 
 import java.util.Iterator;
+import java.util.NoSuchElementException;
 
 public class ArrayQueue<E> implements Queue<E> {  // instance variables
     private E[] data; // generic array used for storage
@@ -74,13 +75,17 @@ public class ArrayQueue<E> implements Queue<E> {  // instance variables
         @Override
         public boolean hasNext() {
             // Implement this
-            return false;
+            return i < size();
         }
 
         @Override
         public E next() {
             // Implement this
-            return null;
+            if (i == size())
+                throw new NoSuchElementException("No such element");
+            E answer = data[(f + i) % data.length];
+            i++;
+            return answer;
         }
     }
 }
