@@ -1,5 +1,7 @@
 package org.csci.labs;
 
+import java.util.Arrays;
+
 public class ArrayStack<E> implements Stack<E> {
     public static final int CAPACITY = 1000; // default array capacity
     private E[] data; // generic array used for storage
@@ -38,6 +40,9 @@ public class ArrayStack<E> implements Stack<E> {
     private void resize(int size) {
         // create a new array of |size| and copy the value from the old array
         // update the arary reference to the new array
+        E[] newArray;
+        newArray = Arrays.copyOf(this.data, size);
+        this.data = newArray;
     }
 
     public int getInternalArraySize() {
